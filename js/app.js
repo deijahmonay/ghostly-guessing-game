@@ -1,10 +1,9 @@
 /*---------------------------------Constants-----------------------------------*/
 //1) User choices of words to guess from random Computer selection
-const words = ['Casper','Danny Phantom','Beetlejuice','Boo']
-const maxGuesses = 4;
+const words = ['Casper','Danny Phantom','Beetlejuice','Boo'] // list of words for the game
+const maxGuesses = 4; // maximum number of incorrect guesses allowed before lose
 // user letters available for guessing
-let keyboardLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','y','z']
-//
+
 
 
 
@@ -12,21 +11,25 @@ let keyboardLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','
 
 
 /*----------------------------------Variables------------------------------------*/
-//Player seletion
-let
+// Define my variables for each state
+let currentWord; //the word that is being guessed in that moment
+let guessedLetters; // this array that will store letters the player guesses
+let remainingGuesses; // number of guesses left
 
 
 
 
 
 /*----------------------------Cached Element Referneces---------------------------*/
+//Function to check the current game status
+
 // const resultDisplayElement= document.querySelector('#result-display')
 
 
 
 
 /*-----------------------------------Functions------------------------------------*/
-
+//Arrow funct
 // Game name: Haunted Hangman /or Ghostly Guessing (not decided yet)
 
 // As a user, I want to see a landing page when I arrive at the website, so I know I’m in the right place.
