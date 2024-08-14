@@ -11,7 +11,16 @@
 <body>
     <header>
         <h1>Haunted Hangman</h1>
-        
+        <div>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Click the "Start Game" button to start</li>
+            <li>Guess the word by clicking on the letters on the keyboard</li>
+            <li>If you guess the word correct, you win!</li>
+            <li>You have a total of four incorrect guesses before "Game Over". If you run out of guesses, you lose and the word will appear</li>
+            <li></li>
+        </ol>
+    </div>
         <div id="keyboard">
             <div class="key">A</div>
             <div class="key">B</div>
@@ -41,6 +50,9 @@
             <div class="key">Z</div>
         </div>
         <button id="start-button">Start Game</button>
+        <button id="restart-button">Restart Game</button>
+        <div id="word-display"></div>
+
     </header>
 </body>
 </html>

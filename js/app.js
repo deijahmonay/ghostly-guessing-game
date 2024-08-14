@@ -1,35 +1,51 @@
+console.log('sanity check!')
 /*---------------------------------Constants-----------------------------------*/
-//1) User choices of words to guess from random Computer selection
-const words = ['Casper','Danny Phantom','Beetlejuice','Boo'] // list of words for the game
+//1) Define constants
+//Define halloween-themed words and max guesses allowed
+const words = ['mummy', 'skeleton', 'vampire', 'ghost', 'headless horseman'] // list of words for the game
 const maxGuesses = 4; // maximum number of incorrect guesses allowed before lose
-// user letters available for guessing
-
-
-
-
-
 
 
 /*----------------------------------Variables------------------------------------*/
-// Define my variables for each state
+// Define variables to track game state
 let currentWord; //the word that is being guessed in that moment
-let guessedLetters; // this array that will store letters the player guesses
-let remainingGuesses; // number of guesses left
-
-
+let guessLeft; // this array that will store letters the player guesses
+let guessedLetters; // number of guesses left
+let wordDisplay;
+// let message = ""
 
 
 
 /*----------------------------Cached Element Referneces---------------------------*/
-//Function to check the current game status
 
 // const resultDisplayElement= document.querySelector('#result-display')
-
-
+const startButtonElement = document.querySelector('#start-button')
+const restartButtonElement = document.querySelector('#restart-button')
+const wordDisplayElement = document.querySelector('#word-display')
+console.log({startButtonElement, restartButtonElement, wordDisplayElement})
+// const keyElements = document.querySelectorAll('.key');
 
 
 /*-----------------------------------Functions------------------------------------*/
-//Arrow funct
+//Function to check the current game status (arrow function with if/else statements for gameplaying purposes)
+
+
+//handle generating random selections for the word to guess
+
+
+
+
+
+
+
+
+/*---------------------------------EventListeners-----------------------------------*/
+//Handle a player clicking a button (start + reset) 
+// document.querySelector('#start-button').addEventListener('click', startGame) //giving buttons a callback function
+
+
+
+
 // Game name: Haunted Hangman /or Ghostly Guessing (not decided yet)
 
 // As a user, I want to see a landing page when I arrive at the website, so I know I’m in the right place.
