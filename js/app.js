@@ -28,7 +28,11 @@ console.log({startButtonElement, restartButtonElement, wordDisplayElement})
 
 /*-----------------------------------Functions------------------------------------*/
 //Function to check the current game status (arrow function with if/else statements for gameplaying purposes)
+function startGame (){
+    currentWord = words[Math.floor(Math.random() * words.length)]
+    guessesLeft = maxGuesses
 
+}
 
 //handle generating random selections for the word to guess
 
@@ -41,7 +45,7 @@ console.log({startButtonElement, restartButtonElement, wordDisplayElement})
 
 /*---------------------------------EventListeners-----------------------------------*/
 //Handle a player clicking a button (start + reset) 
-// document.querySelector('#start-button').addEventListener('click', startGame) //giving buttons a callback function
+document.querySelector('#start-button').addEventListener('click', startGame) //giving buttons a callback function
 
 
 
