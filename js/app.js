@@ -2,7 +2,7 @@ console.log('sanity check!')
 /*---------------------------------Constants-----------------------------------*/
 //1) Define constants
 //Define halloween-themed words and max guesses allowed
-const words = ['mummy', 'skeleton', 'vampire', 'ghost', 'headless horseman'] // list of words for the game
+const words = ['mummy', 'skeleton', 'vampire', 'ghost'] // list of words for the game
 const maxGuesses = 4; // maximum number of incorrect guesses allowed before lose
 
 
@@ -14,7 +14,7 @@ let guessedLetters; // number of guesses left
 let wordDisplay;
 // let message = ""
 
-
+let ammountCorrect = 0
 
 /*----------------------------Cached Element Referneces---------------------------*/
 
@@ -24,20 +24,65 @@ const restartButtonElement = document.querySelector('#restart-button')
 const wordDisplayElement = document.querySelector('#word-display')
 console.log({startButtonElement, restartButtonElement, wordDisplayElement})
 // const keyElements = document.querySelectorAll('.key');
-
-
+let wordContainer = document.getElementById('word')
+let blankWord = []
+let arr= document.getElementsByClassName('key')
+let guesses = document.querySelector('#guesses')
 /*-----------------------------------Functions------------------------------------*/
+function getLetters(){
+    for(let i = 0; i < currentWord.length; i++){
+    blankWord.push('_')
+    }
+    wordContainer.innerHTML = " "
+    wordContainer.innerHTML = blankWord
+}
 //Function to check the current game status (arrow function with if/else statements for gameplaying purposes)
 function startGame (){
     currentWord = words[Math.floor(Math.random() * words.length)]
     guessesLeft = maxGuesses
-
+    guesses.innerHTML =  guessesLeft
+        console.log('word: '+ currentWord)
+    console.log('guessesLeft: '+ guessesLeft)
+    getLetters()
+} 
+function getKeyboard (){
+//arr[0].style = 'display: none' // give the first element in the key
+for(let i = 0; i < arr.length; i++){
+    let btn = arr[i]
+    btn.addEventListener('click', function(){
+    compareLetters(btn)   
+    })
+    wordContainer.innerHTML = blankWord
 }
-
+}
+function compareLetters (btn)
+{
+    let hasLetter = false;
+    for(let j = 0; j < currentWord.length; j++){
+        if(btn.innerHTML.toLowerCase() == currentWord[j].toLowerCase())
+            {
+                blankWord[j] = currentWord[j]
+                wordContainer.innerHTML = blankWord
+                amountCorrect++
+                hasLetter = true
+            }
+    }
+    if(hasLetter == false)
+        {
+            guessesLeft--
+        }
+        guesses.innerHTML = guessesLeft
+       gameMessage ()
+}
+function gameMessage(){
+    let message = document.querySelector('h1')
+    if(guessesLeft <= 0)
+        {
+            message.innerHTML = 'INCORRECT! YOU HAVE FAILED :('
+        }
+}
+getKeyboard()
 //handle generating random selections for the word to guess
-
-
-
 
 
 
@@ -45,6 +90,7 @@ function startGame (){
 
 /*---------------------------------EventListeners-----------------------------------*/
 //Handle a player clicking a button (start + reset) 
+
 document.querySelector('#start-button').addEventListener('click', startGame) //giving buttons a callback function
 
 
