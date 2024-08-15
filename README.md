@@ -28,7 +28,9 @@
 - As a user, I want to see a button to restart the game after I win or lose the game
 
 
-***Attributions:***
+# Attributions:
+- [GitHub Repo Link](https://github.com/deijahmonay/haunted-hangman.git)
+- [FreePik](https://www.freepik.com/free-vector/halloween-objects-scary-ghost-spooky-mummy-dark-spider_3519632.htm#query=mummy%20cartoon&position=6&from_view=keyword&track=ais_hybrid&uuid=6df1d576-d561-43df-96be-66b478a2b832)
 
 
 
@@ -37,3 +39,6 @@
 - JavaScript
 - HTML
 - CSS
+
+## Planned Future Advancements:
+- In the future, I plan on creating a *pop-up message* for the game instructions that allow them to appear when players reach the landing page that also has a *close* button option. I would also like to create a *hint* that appears for each word to allow the user  to guess the word with more ease.
