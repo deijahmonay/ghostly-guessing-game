@@ -29,3 +29,11 @@
 
 
 ***Attributions:***
+
+
+
+***Technologies Used:***
+- VS Code
+- JavaScript
+- HTML
+- CSS
