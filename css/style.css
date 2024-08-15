@@ -7,12 +7,13 @@
 } */
 
 img {
-    width: 45%;
+    width: 40%;
 
 }
 #main-content{
     margin-left: 40%;
-    font-family: 'Creepster'
+    font-family: 'Creepster';
+    font-size: 20px;
 
     }
     
@@ -38,13 +39,15 @@ img {
     #container {
         display: flex;
         flex-direction: row;
-        /* background-color: red; */
+      
        
       
     }
     #start-button {
         margin-left: 15%;
         margin-top: 5%;
-        color:rgb(158, 102, 67)
+        color:rgb(196, 106, 50);
+        height: 60px;
+        width: 10%;
     }
     
