@@ -1,7 +1,7 @@
 /*---------------------------------Constants-----------------------------------*/
 //1) Define constants
 //Define halloween-themed words and max guesses allowed
-const words = ['mummy', 'skeleton', 'vampire', 'ghost'] // list of words for the game
+const words = ['mummy', 'skeleton', 'vampire', 'ghost', 'spider', 'witch'] // list of words for the game
 const maxGuesses = 4; // maximum number of incorrect guesses allowed before lose
 
 
@@ -20,7 +20,6 @@ let amountCorrect = 0 // variable to represent number of correct letters guessed
 
 const startButtonElement = document.querySelector('#start-button') // start game button
 const wordDisplayElement = document.querySelector('#word-display') // element that displays word to user/ player
-console.log({ startButtonElement, wordDisplayElement })
 
 let wordContainer = document.getElementById('word') // set to element that has id of 'word'
 let blankWord = [] // variable to hold user guess
