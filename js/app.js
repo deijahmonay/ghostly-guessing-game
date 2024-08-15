@@ -32,7 +32,7 @@ function getLetters() {
     for (let i = 0; i < currentWord.length; i++) { // for each letter in current word this is adding the corresponding amount of underscore markers 
         blankWord.push('_') // pushed '_' to variable "blankWord" to allow letters to appear like hangman game
     }
-    wordContainer.innerHTML = blankWord.join(' ') //takes data from array to container element
+    wordContainer.innerHTML = blankWord.join(' ') //takes data from array to container element + ' ' to remove ,'s that appear after your press "Start Game"
 }
 //Function to check the current game status (arrow function with if/else statements for gameplaying purposes)
 function startGame() {
@@ -61,8 +61,7 @@ function compareLetters(btn) // function to compare pressed letter to letters in
     let hasLetter = false; // boolean to flag incorrect letter guessed by player
     if (currentWord != '') {
         for (let j = 0; j < currentWord.length; j++) {
-            if (btn.innerHTML.toLowerCase() == currentWord[j].toLowerCase()) //set all letters to lowerCase 
-            {
+            if (btn.innerHTML.toLowerCase() == currentWord[j].toLowerCase()) { //set all letters to lowerCase 
                 blankWord[j] = currentWord[j]
                 wordContainer.innerHTML = blankWord
                 amountCorrect++
@@ -86,7 +85,7 @@ function gameMessage() {
     else if (amountCorrect == currentWord.length) {
         message.innerHTML = `Darkness fades away.. ${currentWord} was your weapon!` // render win message to user
     }
-    
+
 }
 getKeyboard()
 //handle generating random selections for the word to guess

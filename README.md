@@ -1,6 +1,6 @@
-# Haunted Hangman
+# 👻 Haunted Hangman 👻
 
-![Spooky Season Image](https://www.freepik.com/free-vector/halloween-objects-scary-ghost-spooky-mummy-dark-spider_3519632.htm#query=mummy%20cartoon&position=6&from_view=keyword&track=ais_hybrid&uuid=6df1d576-d561-43df-96be-66b478a2b832)
+![Spooky Season Image](https://img.freepik.com/free-vector/halloween-objects-scary-ghost-spooky-mummy-dark-spider_1441-2409.jpg?t=st=1723737985~exp=1723741585~hmac=9ab59e15327da702c0e17da54fdd6f04c497b39d3ee4dbae16e2122126c8c42d&w=826)
 
 ### Background Information:
 
