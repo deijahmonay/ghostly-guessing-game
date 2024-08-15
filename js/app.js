@@ -23,7 +23,7 @@ const wordDisplayElement = document.querySelector('#word-display') // element th
 
 let wordContainer = document.getElementById('word') // set to element that has id of 'word'
 let blankWord = [] // variable to hold user guess
-let arr = document.getElementsByClassName('key') // grabbing keyboard & all elements from index.html file by the class name
+let keyboard = document.getElementsByClassName('key') // grabbing keyboard & all elements from index.html file by the class name
 let guesses = document.querySelector('#guesses') // getting blank container of "guesses"
 /*-----------------------------------Functions------------------------------------*/
 function getLetters() {
@@ -47,8 +47,8 @@ function startGame() {
 }
 function getKeyboard() {  // function to add event listener to keys on keyboard
 
-    for (let i = 0; i < arr.length; i++) {
-        let btn = arr[i] // array of keys
+    for (let i = 0; i < keyboard.length; i++) {
+        let btn = keyboard[i] // array of keys
         btn.addEventListener('click', function () {
             compareLetters(btn)
         })
