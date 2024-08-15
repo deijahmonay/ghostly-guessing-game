@@ -25,25 +25,27 @@
 - As a user, I want to be able to see that I am alotted 4 incorrect letter guesses
 - As a user, I want to see a *lose message* appear if I run out of guesses
 - As a user, I want to see a *win message* appear when I win guess the entire word correctly
-- As a user, I want to see a button to restart the game after I win or lose the game
+- As a user, I want to see a button to restart the game after they win or lose the game
 
 ## Pseuodocode:
 1) Define any variables used to track the state of the game:
-*   Halloween themed words to guess (mummy, skeleton, vampire, ghost, headless horseman, ghost) - might change the words to be more cohesive
+*   Halloween themed words to guess (mummy, skeleton, vampire, ghost, spider, witch) 
 *   Number of guesses for the user
 *   Win/Lose messages for the user
 
 2) Define the required constants:
-• Halloween theme words (mummy, skeleton, vampire, ghost, headless horseman, ghost)
+• Halloween theme words (mummy, skeleton, vampire, ghost, spider, witc)
+
 3) Handle a user guessing a letter for a word:
 *   Get the letter the user guesses
 *   Check if letter is in the word
 *   Win/Lose messages for the user
 *   Track number of guesses left for user in the level
+
 5) Display message to the user playing the game:
-*   Show a "COMPLETED!" Message if user guesses the word correctly (passes level)
-*   Show a "FAILED :" message if the user loses - show correct word (possibly - undecided)
-*  Show a "RESTART" butto n if win/loss condition
+*   Show a "WIN!" Message if user guesses the word correctly (passes level)
+*   Show a "LOSE!" message if the user loses - show correct word (possibly - undecided)
+*  Show a "RESTART" button if win/loss condition met
 
 
 
