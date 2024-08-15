@@ -5,28 +5,38 @@
    
     justify-content: center;
 } */
-
-/* header {
-    display: flex;
-    flex-direction: center;
-
-} */
-
-.key {
-    display: flex;
-    background-color: rec;
-    padding-left: 12px;
-    flex-direction: column;
-    border: 2px black solid;
-}
-#container {
-    display: flex;
-    flex-direction: row;
-    /* background-color: red; */
-   
-  
-}
-#start-button {
-    display: flex;
-    flex-direction: row;
-}
+#main-content{
+    margin-left: 40%;
+    }
+    
+    
+    /* header {
+        display: flex;
+        flex-direction: center;
+    
+    } */
+    
+    .key {
+        display: flex;
+        background-color: rgb(231, 146, 10);
+        padding-left: 12px;
+        flex-direction: column;
+        border: 2px black solid;
+    }
+    #keyboard > div 
+    {
+        margin-top: 10px;
+    }
+    #container {
+        display: flex;
+        flex-direction: row;
+        /* background-color: red; */
+       
+      
+    }
+    #start-button {
+        margin-left: 15%;
+        margin-top: 5%;
+        color:rgb(158, 102, 67)
+    }
+    
