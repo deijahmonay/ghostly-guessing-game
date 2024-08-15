@@ -6,7 +6,10 @@
     justify-content: center;
 } */
 
+img {
+    width: 45%;
 
+}
 #main-content{
     margin-left: 40%;
     font-family: 'Creepster'
