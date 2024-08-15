@@ -5,8 +5,12 @@
    
     justify-content: center;
 } */
+
+
 #main-content{
     margin-left: 40%;
+    font-family: 'Creepster'
+    
     }
     
     
@@ -18,10 +22,11 @@
     
     .key {
         display: flex;
-        background-color: rgb(231, 146, 10);
+        background-color: rgb(240, 159, 27);
         padding-left: 12px;
         flex-direction: column;
         border: 2px black solid;
+        font-family: 'Creepster';
     }
     #keyboard > div 
     {
