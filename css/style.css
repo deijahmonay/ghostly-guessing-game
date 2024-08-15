@@ -2,7 +2,7 @@
 /* html, body {
     margin: 5px;
     display: flex;
-    flex-direction: center;
+   
     justify-content: center;
 } */
 
@@ -14,16 +14,19 @@
 
 .key {
     display: flex;
-    background-color: red;
+    background-color: rec;
     padding-left: 12px;
     flex-direction: column;
     border: 2px black solid;
 }
-
 #container {
     display: flex;
     flex-direction: row;
     /* background-color: red; */
    
   
+}
+#start-button {
+    display: flex;
+    flex-direction: row;
 }

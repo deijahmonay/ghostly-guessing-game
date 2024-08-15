@@ -9,41 +9,45 @@ const maxGuesses = 4; // maximum number of incorrect guesses allowed before lose
 /*----------------------------------Variables------------------------------------*/
 // Define variables to track game state
 let currentWord; //the word that is being guessed in that moment
-let guessLeft; // this array that will store letters the player guesses
-let guessedLetters; // number of guesses left
-let wordDisplay;
+let guessesLeft; // this array that will store letters the player guesses
+let guessedLetters; // stores the letters guesses by the player/ user 
+let wordDisplay; // this allows the word to display to the screen
 // let message = ""
 
-let ammountCorrect = 0
+let amountCorrect = 0   
 
 /*----------------------------Cached Element Referneces---------------------------*/
 
 // const resultDisplayElement= document.querySelector('#result-display')
-const startButtonElement = document.querySelector('#start-button')
+const startButtonElement = document.querySelector('#start-button') // start game button
 const restartButtonElement = document.querySelector('#restart-button')
-const wordDisplayElement = document.querySelector('#word-display')
+const wordDisplayElement = document.querySelector('#word-display') // element that displays word to user/ player
 console.log({startButtonElement, restartButtonElement, wordDisplayElement})
-// const keyElements = document.querySelectorAll('.key');
+
 let wordContainer = document.getElementById('word')
 let blankWord = []
 let arr= document.getElementsByClassName('key')
 let guesses = document.querySelector('#guesses')
 /*-----------------------------------Functions------------------------------------*/
 function getLetters(){
+    blankWord = []
     for(let i = 0; i < currentWord.length; i++){
     blankWord.push('_')
     }
-    wordContainer.innerHTML = " "
     wordContainer.innerHTML = blankWord
 }
 //Function to check the current game status (arrow function with if/else statements for gameplaying purposes)
 function startGame (){
+    document.getElementById('start-button').innerHTML='Restart Game'
+    amountCorrect = 0
     currentWord = words[Math.floor(Math.random() * words.length)]
     guessesLeft = maxGuesses
     guesses.innerHTML =  guessesLeft
         console.log('word: '+ currentWord)
     console.log('guessesLeft: '+ guessesLeft)
     getLetters()
+    gameMessage()
+
 } 
 function getKeyboard (){
 //arr[0].style = 'display: none' // give the first element in the key
@@ -67,7 +71,7 @@ function compareLetters (btn)
                 hasLetter = true
             }
     }
-    if(hasLetter == false)
+    if(hasLetter == false && guessesLeft !=0)
         {
             guessesLeft--
         }
@@ -76,10 +80,16 @@ function compareLetters (btn)
 }
 function gameMessage(){
     let message = document.querySelector('h1')
+      message.innerHTML = ''
     if(guessesLeft <= 0)
         {
-            message.innerHTML = 'INCORRECT! YOU HAVE FAILED :('
+            message.innerHTML = `FAIL! The correct word was ${currentWord}`
         }
+        else if (amountCorrect == currentWord.length)
+        {
+            message.innerHTML = `CONGRATS! You guessed correct ${currentWord}`
+        }
+        console.log('amountCorrect: '+ amountCorrect)
 }
 getKeyboard()
 //handle generating random selections for the word to guess
